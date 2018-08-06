@@ -19,8 +19,10 @@ class BIG_INT {
 public:
 	BIG_INT();
 	~BIG_INT();
-	big_int *&return_msb();
-	big_int *&return_lsb();
+	big_int *return_msb();
+	big_int *return_lsb();
+	big_int *&return_msb_ref();
+	big_int *&return_lsb_ref();
 	int return_size();
 	bool return_flag();
 	void set_flag(bool x);
@@ -28,13 +30,13 @@ public:
 	void add_for_arthematic(char a);
 	friend istream &operator>>(istream  &input, BIG_INT &var);
 	friend ostream &operator<<(ostream  &output, BIG_INT &var);
-	bool operator==(BIG_INT&var1);
-	bool operator!=(BIG_INT&var1);
-	bool operator>(BIG_INT&var1);
-	bool operator<(BIG_INT&var1);
-	bool operator>=(BIG_INT&var1);
-	bool operator<=(BIG_INT&var1);
-	void operator=(BIG_INT&var1);
+	bool operator==(BIG_INT &var1);
+	bool operator!=(BIG_INT &var1);
+	bool operator>(BIG_INT &var1);
+	bool operator<(BIG_INT &var1);
+	bool operator>=(BIG_INT &var1);
+	bool operator<=(BIG_INT &var1);
+	void operator=(BIG_INT &var1);
 	BIG_INT *&add(BIG_INT &var1);
 	BIG_INT *&sub(BIG_INT &var1);
 	BIG_INT &operator+(BIG_INT &var1);
